@@ -1,0 +1,27 @@
+The general form of Array declaration in Java is:
+-type array-name[];
+-OR
+-type[] array-name;
+
+Instantiating an Array: When an array is declared, only a reference of the array is created. 
+To actually create or give memory to the array, you create an array like this:
+array-name = new type [size];
+
+Example:
+int intArray[];    //declaring array
+intArray = new int[20];  // allocating memory to array
+OR
+int[] intArray = new int[20]; // combining both statements in one
+
+ArrayList in Java
+
+ArrayList is a part of the collection framework and is present in java.util package. It provides us dynamic arrays in Java. Though it may be slower than standard arrays, it can be helpful in programs where a lot of array manipulation is needed.
+
+Constructors in Java ArrayList:
+ArrayList(): This constructor is used to build an empty array list.
+ArrayList(Collection c): This constructor is used to build an array list initialized with the elements from collection c.
+ArrayList(int capacity): This constructor is used to build an array list with the specified initial capacity.
+
+
+Creating a generic integer ArrayList:
+ArrayList arrli = new ArrayList();
