@@ -1,0 +1,112 @@
+What is an Array??
+    -An array is a collection of items of the same variable type stored that are stored at contiguous memory locations. 
+    -It’s one of the most popular and simple data structures and is often used to implement other data structures. 
+    -Each item in an array is indexed starting with 0.
+
+Basic terminologies of array??
+    -Array Index: In an array, elements are identified by their indexes. Array index starts from 0.
+    -Array element: Elements are items stored in an array and can be accessed by their index.
+    -Array Length: The length of an array is determined by the number of elements it can contain. 
+
+int arr[5];	 // This array will store integer type element
+char arr[10]; // This array will store char type element
+float arr[20]; // This array will store float type element
+
+
+Implementing Arrays in C++ using STL
+
+We already have discussed the basic declaration of arrays. Arrays can also be implemented using some built-in classes available in the C++ Standard Template Library.
+Some of the most commonly used classes for implementing sequential lists or arrays are:
+- Vector
+- List
+
+Vector in C++ STL is a class that represents a dynamic array. The advantages of vector over normal arrays are,
+
+- We do not need to pass size as an extra parameter when we pass vector.
+- Vectors have many in-built functions for erasing an element, inserting an element etc.
+- Vectors support dynamic sizes, we do not have to initially specify the size of a vector. We can also resize a vector.
+- There are many other functionalities vector provide.
+
+Vectors are same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes there may be a need of extending the array. Removing the last element takes only constant time because no resizing happens. Inserting and erasing at the beginning or in the middle is linear in time.
+
+To use the Vector class, include the below header file in your program:
+
+#include< vector >
+
+**Declaring Vector**:
+
+vector<Type_of_element >vector_name;
+
+Here,Type_of_element can be any valid C++ data type,
+or can be any other container also like Pair, List etc.
+
+Some important and commonly used functions of Vector class are:
+
+- **begin()** – Returns an iterator pointing to the first element in the vector.
+- **end()** – Returns an iterator pointing to the theoretical element that follows the last element in the vector.
+- **size()** – Returns the number of elements in the vector.
+- **capacity()** – Returns the size of the storage space currently allocated to the vector expressed as number of elements.
+- **empty()** – Returns whether the container is empty.
+- **push_back()** – It push the elements into a vector from the back.
+- **pop_back()** – It is used to pop or remove elements from a vector from the back.
+- **insert()** – It inserts new elements before the element at the specified position.
+- **erase()** – It is used to remove elements from a container from the specified position or range.
+- **swap()** – It is used to swap the contents of one vector with another vector of same type and size.
+- **clear()** – It is used to remove all the elements of the vector container.
+- **emplace()** – It extends the container by inserting new element at position.
+- **emplace_back()** – It is used to insert a new element into the vector container, the new element is added to the end of the vector.
+
+### **List**
+
+Lists are sequence containers that allow non-contiguous memory allocation. List in C++ STL implements a doubly linked list and not arrays. As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick. Normally, when we say a List, we talk about doubly linked lists. For implementing a singly linked list, we can use **forward_list** class in C++ STL.
+
+To use the List class, include the below header file in your program:
+
+```
+#include< list >
+```
+
+**Declaring List**:
+
+```
+list<Type_of_element >list_name;
+
+Here,Type_of_element can be any valid C++ data type,
+or can be any other container also like Pair, List etc.
+```
+
+Some important and commonly used functions of List are:
+
+- **front()** – Returns the value of the first element in the list.
+- **back()** – Returns the value of the last element in the list.
+- **push_front(g)** – Adds a new element ‘g’ at the beginning of the list.
+- **push_back(g)** – Adds a new element ‘g’ at the end of the list.
+- **pop_front()** – Removes the first element of the list, and reduces the size of the list by 1.
+- **pop_back()** – Removes the last element of the list, and reduces the size of the list by 1.
+- **begin()** and **end()** – begin() function returns an iterator pointing to the first element of the list.
+- **empty()** – Returns whether the list is empty(1) or not(0).
+- **insert()** – Inserts new elements in the list before the element at a specified position.
+- **reverse()** – Reverses the list.
+- **size()** – Returns the number of elements in the list.
+- **sort()** – Sorts the list in increasing order.
+
+## **Advantages of using Arrays:**
+
+- Arrays allow random access to elements. This makes accessing elements by position faster.
+- Arrays have better cache locality which makes a pretty big difference in performance.
+- Arrays represent multiple data items of the same type using a single name.
+- Arrays store multiple data of similar types with the same name.
+- Array data structures are used to implement the other data structures like linked lists, stacks, queues, trees, graphs, etc.
+
+## **Disadvantages of Array:**
+
+- As arrays have a fixed size, once the memory is allocated to them, it cannot be increased or decreased, making it impossible to store extra data if required. An array of fixed size is referred to as a static array.
+- Allocating less memory than required to an array leads to loss of data.An array is homogeneous in nature so, a single array cannot store values of different data types.
+- Arrays store data in contiguous memory locations, which makes deletion and insertion very difficult to implement. This problem is overcome by implementing linked lists, which allow elements to be accessed randomly.
+
+## **Application of Array:**
+
+- They are used in the implementation of other data structures such as array lists, heaps, hash tables, vectors, and matrices.
+- Database records are usually implemented as arrays.
+- It is used in lookup tables by computer.
+- It is used for different sorting algorithms such as bubble sort insertion sort, merge sort, and quick sort.
